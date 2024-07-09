@@ -1,9 +1,9 @@
 "use client"
 
-import React, { act, useState } from 'react'
-import { closestCorners, DndContext } from '@dnd-kit/core'
+import React, { useState } from 'react'
+import { closestCorners, DndContext, KeyboardSensor, PointerSensor, TouchSensor, useSensor, useSensors } from '@dnd-kit/core'
 import EntriesColumn from './EntriesColumn'
-import { arrayMove } from '@dnd-kit/sortable'
+import { arrayMove, sortableKeyboardCoordinates } from '@dnd-kit/sortable'
 
 const Dashboard = () => {
   const [tasks, setTasks] = useState([
@@ -27,9 +27,17 @@ const Dashboard = () => {
     })
   }
 
+  const sensors = useSensors(
+    useSensor(PointerSensor),
+    useSensor(TouchSensor),
+    useSensor(KeyboardSensor, {
+      coordinateGetter: sortableKeyboardCoordinates,
+    })
+  )
+
   return (
     <div>
-      <DndContext onDragEnd={handleDragEnd} collisionDetection={closestCorners}>
+      <DndContext sensors={sensors} onDragEnd={handleDragEnd} collisionDetection={closestCorners}>
         <EntriesColumn 
           tasks={tasks}
         />
