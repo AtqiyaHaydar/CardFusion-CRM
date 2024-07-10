@@ -6,8 +6,7 @@ import EntriesCard from './EntriesCard'
 const EntriesColumn = ({ tasks, name }) => {
   return (
     <div className='bg-white border rounded-lg p-4 shadow-sm relative h-[500px] min-w-[250px] overflow-y-auto'>
-      <h5 className='font-medium text-start w-full pb-4 absolute top-4 left-4'>{name}</h5>
-      <div className='mt-[40px]' />
+      <h5 className='font-medium text-start w-full pb-4'>{name}</h5>
       <SortableContext 
         items={tasks} 
         strategy={verticalListSortingStrategy}
