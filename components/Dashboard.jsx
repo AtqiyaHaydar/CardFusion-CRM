@@ -8,57 +8,17 @@ import EntriesCard from './EntriesCard';
 
 const Dashboard = () => {
   const [columns, setColumns] = useState({
-    column1: { name: "New Leads", tasks: [
-      { id: '1', title: "Text 1" },
-      { id: '2', title: "Text 2" },
-      { id: '3', title: "Text 3" }
-    ]},
-    column2: { name: "No Interested", tasks: [
-      { id: '4', title: "Text 4" },
-      { id: '5', title: "Text 5" },
-      { id: '6', title: "Text 6" }
-    ]},
-    column3: { name: "Interaction1 OK", tasks: [
-      { id: '7', title: "Text 7" },
-      { id: '8', title: "Text 8" },
-      { id: '9', title: "Text 9" }
-    ]},
-    column4: { name: "Interaction2 OK", tasks: [
-      { id: '10', title: "Text 10" },
-      { id: '11', title: "Text 11" },
-      { id: '12', title: "Text 12" }
-    ]},
-    column5: { name: "Interaction3 OK", tasks: [
-      { id: '13', title: "Text 13" },
-      { id: '14', title: "Text 14" },
-      { id: '15', title: "Text 15" }
-    ]},
-    column6: { name: "Pre-Qualified", tasks: [
-      { id: '16', title: "Text 16" },
-      { id: '17', title: "Text 17" },
-      { id: '18', title: "Text 18" }
-    ]},
-    column7: { name: "Deal Closed", tasks: [
-      { id: '19', title: "Text 19" },
-      { id: '20', title: "Text 20" },
-      { id: '21', title: "Text 21" }
-    ]},
-    column8: { name: "FeedBack", tasks: [
-      { id: '22', title: "Text 22" },
-      { id: '23', title: "Text 23" },
-      { id: '24', title: "Text 24" }
-    ]},
-    column9: { name: "FollowUp", tasks: [
-      { id: '25', title: "Text 25" },
-      { id: '26', title: "Text 26" },
-      { id: '27', title: "Text 27" }
-    ]},
-    column10: { name: "Ended", tasks: [
-      { id: '28', title: "Text 28" },
-      { id: '29', title: "Text 29" },
-      { id: '30', title: "Text 30" }
-    ]}
-  });  
+    column1: { name: "New Leads", tasks: [{ id: '1', title: "Placeholder" }] },
+    column2: { name: "No Interested", tasks: [{ id: '2', title: "Placeholder" }] },
+    column3: { name: "Interaction1 OK", tasks: [{ id: '3', title: "Placeholder" }] },
+    column4: { name: "Interaction2 OK", tasks: [{ id: '4', title: "Placeholder" }] },
+    column5: { name: "Interaction3 OK", tasks: [{ id: '5', title: "Placeholder" }] },
+    column6: { name: "Pre-Qualified", tasks: [{ id: '6', title: "Placeholder" }] },
+    column7: { name: "Deal Closed", tasks: [{ id: '7', title: "Placeholder" }] },
+    column8: { name: "FeedBack", tasks: [{ id: '8', title: "Placeholder" }] },
+    column9: { name: "FollowUp", tasks: [{ id: '9', title: "Placeholder" }] },
+    column10: { name: "Ended", tasks: [{ id: '10', title: "Placeholder" }] }
+  });
 
   const [activeId, setActiveId] = useState(null);
 
