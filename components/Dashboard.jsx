@@ -10,9 +10,8 @@ const Dashboard = () => {
   const [columns, setColumns] = useState({
     column1: {
       name: "New Leads",
-      tasks: [{
+      tasks: [{id: '11', title: "Placeholder (Do not move)"}, {
         id: '1',
-        title: "Lead 1",
         userName: "John Doe",
         contactInfo: { email: "john.doe@example.com", phone: "123-456-7890" },
         interactionHistory: ["Initial contact", "Follow-up call"],
@@ -22,9 +21,8 @@ const Dashboard = () => {
     },
     column2: {
       name: "No Interested",
-      tasks: [{
+      tasks: [{id: '20', title: "Placeholder (Do not move)"}, {
         id: '2',
-        title: "Not Interested",
         userName: "Jane Smith",
         contactInfo: { email: "jane.smith@example.com", phone: "987-654-3210" },
         interactionHistory: ["Exploratory meeting"],
@@ -34,9 +32,8 @@ const Dashboard = () => {
     },
     column3: {
       name: "Interaction1 OK",
-      tasks: [{
+      tasks: [{id: '30', title: "Placeholder (Do not move)"}, {
         id: '3',
-        title: "Interaction 1 Success",
         userName: "Michael Johnson",
         contactInfo: { email: "michael.johnson@example.com", phone: "555-123-4567" },
         interactionHistory: ["Demo session", "Positive feedback"],
@@ -46,9 +43,8 @@ const Dashboard = () => {
     },
     column4: {
       name: "Interaction2 OK",
-      tasks: [{
+      tasks: [{id: '40', title: "Placeholder (Do not move)"}, {
         id: '4',
-        title: "Interaction 2 Success",
         userName: "Sarah Brown",
         contactInfo: { email: "sarah.brown@example.com", phone: "777-987-6543" },
         interactionHistory: ["Product trial", "Decision maker meeting"],
@@ -58,9 +54,8 @@ const Dashboard = () => {
     },
     column5: {
       name: "Interaction3 OK",
-      tasks: [{
+      tasks: [{id: '50', title: "Placeholder (Do not move)"}, {
         id: '5',
-        title: "Interaction 3 Success",
         userName: "Robert Lee",
         contactInfo: { email: "robert.lee@example.com", phone: "111-222-3333" },
         interactionHistory: ["Contract negotiation"],
@@ -70,9 +65,8 @@ const Dashboard = () => {
     },
     column6: {
       name: "Pre-Qualified",
-      tasks: [{
+      tasks: [{id: '60', title: "Placeholder (Do not move)"}, {
         id: '6',
-        title: "Pre-Qualified Lead",
         userName: "Emily Davis",
         contactInfo: { email: "emily.davis@example.com", phone: "444-555-6666" },
         interactionHistory: ["Qualification call"],
@@ -82,9 +76,8 @@ const Dashboard = () => {
     },
     column7: {
       name: "Deal Closed",
-      tasks: [{
+      tasks: [{id: '70', title: "Placeholder (Do not move)"}, {
         id: '7',
-        title: "Closed Deal",
         userName: "David Wilson",
         contactInfo: { email: "david.wilson@example.com", phone: "999-888-7777" },
         interactionHistory: ["Signed contract"],
@@ -94,9 +87,8 @@ const Dashboard = () => {
     },
     column8: {
       name: "FeedBack",
-      tasks: [{
+      tasks: [{id: '80', title: "Placeholder (Do not move)"}, {
         id: '8',
-        title: "Feedback Received",
         userName: "Olivia Martinez",
         contactInfo: { email: "olivia.martinez@example.com", phone: "333-777-9999" },
         interactionHistory: ["User feedback session"],
@@ -106,9 +98,8 @@ const Dashboard = () => {
     },
     column9: {
       name: "FollowUp",
-      tasks: [{
+      tasks: [{id: '90', title: "Placeholder (Do not move)"}, {
         id: '9',
-        title: "Follow-up Needed",
         userName: "Daniel White",
         contactInfo: { email: "daniel.white@example.com", phone: "666-444-2222" },
         interactionHistory: ["Follow-up email sent"],
@@ -118,9 +109,8 @@ const Dashboard = () => {
     },
     column10: {
       name: "Ended",
-      tasks: [{
+      tasks: [{id: '100', title: "Placeholder (Do not move)"}, {
         id: '10',
-        title: "End of Cycle",
         userName: "Sophia Brown",
         contactInfo: { email: "sophia.brown@example.com", phone: "222-999-8888" },
         interactionHistory: ["Final review"],

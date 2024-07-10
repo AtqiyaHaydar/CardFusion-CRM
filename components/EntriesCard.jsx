@@ -19,14 +19,19 @@ const EntriesCard = ({ id, title, userName, contactInfo, interactionHistory, sta
       {...listeners}
       style={style}
     >
-      <p className='font-semibold'>{userName}</p>
-      <p className='text-[13px]'>{contactInfo?.email} <br></br> {contactInfo?.phone}</p>
-      <div className='w-full bg-black/10 h-[1px] my-2' />
-      <p className='font-medium'>Interaction History: </p>
-      <p className='text-[13px]'>{interactionHistory.join(', ')}</p>
-      <div className='w-full bg-black/10 h-[1px] my-2' />
-      <p className='text-[13px]'>Status: {status}</p>
-      <p className='text-[13px]'>Notes: {notes}</p>
+      {title && <p className='text-md'>{title}</p>}
+      {userName && <p className='font-semibold'>{userName}</p> }
+      {contactInfo && <p className='text-[13px]'>{contactInfo?.email} <br></br> {contactInfo?.phone}</p>}
+      {contactInfo && <div className='w-full bg-black/10 h-[1px] my-2' />}
+      {interactionHistory && (
+        <div>
+          <p className='font-medium'>Interaction History: </p>
+          <p className='text-[13px]'>{interactionHistory?.join(', ')}</p>
+          <div className='w-full bg-black/10 h-[1px] my-2' />
+        </div>
+      )}
+      {status && <p className='text-[13px]'>Status: {status}</p>}
+      {notes && <p className='text-[13px]'>Notes: {notes}</p>}
     </div>
   )
 }

@@ -20,11 +20,11 @@ const EntriesColumn = ({ tasks, name }) => {
                 key={task.id}
                 id={task.id}
                 title={task.title}
-                userName={task.userName}
-                contactInfo={task.contactInfo}
-                interactionHistory={task.interactionHistory}
-                status={task.status}
-                notes={task.notes}
+                userName={task?.userName}
+                contactInfo={task?.contactInfo}
+                interactionHistory={task?.interactionHistory}
+                status={task?.status}
+                notes={task?.notes}
               />
             ))
           )}
