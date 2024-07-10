@@ -152,11 +152,12 @@ const Dashboard = () => {
       });
     };
   
+    moveTasksAutomatically()
     // Initial run and interval setup
-    const intervalId = setInterval(moveTasksAutomatically, 3000);
+    // const intervalId = setInterval(moveTasksAutomatically, 3000);
   
     // Clean up interval
-    return () => clearInterval(intervalId);
+    // return () => clearInterval(intervalId);
   }, []); // Empty dependency array means this effect runs only once on mount
 
   const findActiveTask = (id) => {
