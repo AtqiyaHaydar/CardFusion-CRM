@@ -13,7 +13,7 @@ const EntriesCard = ({ id, title }) => {
   
   return (
     <div 
-      className='p-2 mb-2 bg-white rounded-md shadow-sm border' 
+      className='p-2 mb-2 bg-white/100 rounded-md shadow-sm w-full' 
       ref={setNodeRef} 
       {...attributes} 
       {...listeners}
