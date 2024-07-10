@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { closestCorners, DndContext, DragOverlay, KeyboardSensor, PointerSensor, TouchSensor, useSensor, useSensors } from '@dnd-kit/core';
 import EntriesColumn from './EntriesColumn';
 import { arrayMove, sortableKeyboardCoordinates } from '@dnd-kit/sortable';
@@ -15,8 +15,8 @@ const Dashboard = () => {
         userName: "John Doe",
         contactInfo: { email: "john.doe@example.com", phone: "123-456-7890" },
         interactionHistory: ["Initial contact", "Follow-up call"],
-        status: "Pending",
-        notes: "Interested in product X"
+        status: "Closed",
+        notes: "Not happy in product X"
       }]
     },
     column2: {
@@ -121,6 +121,43 @@ const Dashboard = () => {
   });
 
   const [activeId, setActiveId] = useState(null);
+
+  useEffect(() => {
+    const moveTasksAutomatically = () => {
+      setColumns(prevColumns => {
+        const updatedColumns = { ...prevColumns };
+  
+        const columnTransitions = [
+          { from: 'column1', to: 'column2', criteria: task => task.status === 'Closed' },
+          { from: 'column2', to: 'column3', criteria: task => task.notes && task.notes.includes('Interested') },
+          { from: 'column3', to: 'column4', criteria: task => task.notes && task.notes.includes('follow-up') },
+          // Add more transitions as needed
+        ];
+  
+        for (const { from, to, criteria } of columnTransitions) {
+          const tasksToMove = updatedColumns[from].tasks.filter(task => criteria(task));
+        
+          if (tasksToMove.length > 0) {
+            const taskToMove = tasksToMove[0]; // Move the first eligible task found
+            const index = updatedColumns[from].tasks.findIndex(t => t.id === taskToMove.id);
+            if (index !== -1) {
+              const movedTask = updatedColumns[from].tasks.splice(index, 1)[0];
+              updatedColumns[to].tasks.push(movedTask);
+            }
+            break; // Exit loop after moving one task
+          }
+        }
+  
+        return updatedColumns;
+      });
+    };
+  
+    // Initial run and interval setup
+    const intervalId = setInterval(moveTasksAutomatically, 3000);
+  
+    // Clean up interval
+    return () => clearInterval(intervalId);
+  }, []); // Empty dependency array means this effect runs only once on mount
 
   const findActiveTask = (id) => {
     for (const column of Object.values(columns)) {
