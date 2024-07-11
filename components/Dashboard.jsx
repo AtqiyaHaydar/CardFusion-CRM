@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { closestCorners, DndContext, DragOverlay, KeyboardSensor, PointerSensor, TouchSensor, useSensor, useSensors } from '@dnd-kit/core';
 import EntriesColumn from './EntriesColumn';
-import { arrayMove, sortableKeyboardCoordinates } from '@dnd-kit/sortable';
+import { sortableKeyboardCoordinates } from '@dnd-kit/sortable';
 import EntriesCard from './EntriesCard';
 
 const Dashboard = () => {
@@ -151,8 +151,10 @@ const Dashboard = () => {
         return updatedColumns;
       });
     };
-  
-    moveTasksAutomatically()
+
+    setTimeout(() => {
+      moveTasksAutomatically()
+    }, 3000)
   }, []); 
 
   const findActiveTask = (id) => {
