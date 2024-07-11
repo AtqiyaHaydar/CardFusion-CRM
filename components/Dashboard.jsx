@@ -131,7 +131,7 @@ const Dashboard = () => {
           { from: 'column1', to: 'column2', criteria: task => task.status === 'Closed' },
           { from: 'column2', to: 'column3', criteria: task => task.notes && task.notes.includes('Interested') },
           { from: 'column3', to: 'column4', criteria: task => task.notes && task.notes.includes('follow-up') },
-          // Add more transitions as needed
+          
         ];
   
         for (const { from, to, criteria } of columnTransitions) {
