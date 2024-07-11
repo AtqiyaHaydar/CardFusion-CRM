@@ -138,13 +138,13 @@ const Dashboard = () => {
           const tasksToMove = updatedColumns[from].tasks.filter(task => criteria(task));
         
           if (tasksToMove.length > 0) {
-            const taskToMove = tasksToMove[0]; // Move the first eligible task found
+            const taskToMove = tasksToMove[0];
             const index = updatedColumns[from].tasks.findIndex(t => t.id === taskToMove.id);
             if (index !== -1) {
               const movedTask = updatedColumns[from].tasks.splice(index, 1)[0];
               updatedColumns[to].tasks.push(movedTask);
             }
-            break; // Exit loop after moving one task
+            break; 
           }
         }
   
@@ -153,12 +153,7 @@ const Dashboard = () => {
     };
   
     moveTasksAutomatically()
-    // Initial run and interval setup
-    // const intervalId = setInterval(moveTasksAutomatically, 3000);
-  
-    // Clean up interval
-    // return () => clearInterval(intervalId);
-  }, []); // Empty dependency array means this effect runs only once on mount
+  }, []); 
 
   const findActiveTask = (id) => {
     for (const column of Object.values(columns)) {

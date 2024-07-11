@@ -5,7 +5,7 @@ import EntriesCard from './EntriesCard'
 
 const EntriesColumn = ({ tasks, name }) => {
   return (
-    <div className='bg-white/75 backdrop-blur-sm rounded-xl p-4 shadow-sm relative h-[525px] min-w-[250px] overflow-hidden'>
+    <div className='bg-white/75 backdrop-blur-sm rounded-xl p-4 shadow-sm relative h-[525px] min-w-[175px] md:min-w-[250px] overflow-hidden'>
       <h5 className='font-medium text-start w-full pb-4'>{name}</h5>
       <div className='overflow-y-auto flex items-center justify-start flex-col h-full no-scrollbar'>
         <SortableContext 

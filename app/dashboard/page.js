@@ -6,7 +6,7 @@ const DashboardPage = () => {
   return (
     <div className='h-screen w-full overflow-hidden'>
       <Header />
-      <div className='wrapper mt-[80px]'>
+      <div className='wrapper mt-[80px] xl:max-w-[1600px]'>
         <Dashboard />
       </div>
     </div>
