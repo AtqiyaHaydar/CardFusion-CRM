@@ -144,7 +144,6 @@ const Dashboard = () => {
               const movedTask = updatedColumns[from].tasks.splice(index, 1)[0];
               updatedColumns[to].tasks.push(movedTask);
             }
-            break; 
           }
         }
   

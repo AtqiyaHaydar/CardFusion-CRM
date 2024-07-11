@@ -14,12 +14,12 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <main className="h-screen w-full overflow-hidden flex items-center justify-center">
-      <Card className="bg-white/15 border-none shadow-none p-4">
+      <Card className="bg-white/15 border-none shadow-none p-4 mx-4">
         <CardHeader>
-          <CardTitle className='text-center text-white'>
+          <CardTitle className='text-center text-[18px] md:text-2xl text-white'>
             Welcome To CardFusion CRM!
           </CardTitle>
-          <CardDescription className='text-center text-white/90 text-[18px]'>
+          <CardDescription className='text-center text-white/90 text-[14px] md:text-[18px]'>
             A Customer Relationship Management Application.
           </CardDescription>
         </CardHeader>
