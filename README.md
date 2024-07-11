@@ -46,4 +46,6 @@ npm run dev
 
 ### 
 
-<h2 align="left">🔗✨ Acknowledgements</h2>
+<h2 align="left">✨ Acknowledgements</h2>
+
+This project is presented to Sir Alessandro Spada and Arfiano Jordhy. I am deeply grateful for the opportunity to intern at Purple Box. Thank you for your guidance and support throughout this experience.
